@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <script src="script.js"></script>
+    <!DOCTYPE html>
+    <!DOCTYPE html>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vyhledávač aut</title>
+</head>
+
+<body>
+    <h1>Vyhledávač aut</h1>
+    <form id="carSearchForm">
+        <input type="text" id="searchInput" placeholder="Zadejte jedno ze tří aut">
+        <button type="button" onclick="searchCars()">Hledat</button>
+    </form>
+    <div id="searchResults"></div>
+
+    <script>
+        function searchCars() {
+            const searchInput = document.getElementById("searchInput");
+            const searchResults = document.getElementById("searchResults");
+            const fakeResults = [
+                { name: "BMW", parameters: "Motor: 4.4L Twin-Turbo V8, Výkon: 627 HP", photo: "bmwj.jpg" },
+                { name: "Audi", parameters: "Motor: 4.0L V8 TFSI, Výkon: 600 HP", photo: "audi.jpg" },
+                { name: "Mercedes", parameters: "Motor: 4.0L V8 Twin-Turbo, Výkon: 604 HP", photo: "audi.jpg" },
+            ];
+
+            const searchQuery = searchInput.value;
+            const filteredResults = fakeResults.filter(car => car.name.toLowerCase().includes(searchQuery.toLowerCase()));
+
+
+            const resultsContainer = document.getElementById("searchResults");
+            resultsContainer.innerHTML = "";
+
+            filteredResults.forEach(car => {
+                const resultItem = document.createElement("div");
+                resultItem.classList.add("car-result");
+
+                const carName = document.createElement("h2");
+                carName.textContent = car.name;
+                resultItem.appendChild(carName);
+
+                const carParameters = document.createElement("p");
+                carParameters.textContent = `Parametry: ${car.parameters}`;
+                resultItem.appendChild(carParameters);
+
+                const carPhoto = document.createElement("img");
+                carPhoto.src = car.photo;
+                carPhoto.alt = car.name;
+                resultItem.appendChild(carPhoto);
+
+                resultsContainer.appendChild(resultItem);
+            });
+        }
+    </script>
+
+    <style>
+        .car-result {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        .car-result img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</body>
+
+</html>
+
+</html>
+<title></title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+</style>
+</head>
+
+<body>
+    <div class="cointainer">
+        <div class="header">
+            <ul class="seznam">
+                <li> <a href="./main.html">VYHLEDÁVAČ</a></li>
+                <li> <a href="./hodina4.html">MERCEDES E63S</a></li>
+                <li> <a href="./index.html">BMW M5 COMP</a></li>
+                <li> <a href="./float.html">AUDI RS6 AVANT</a></li>
+            </ul>
+        </div>
+        <div class="imgback main_img">
+        </div>
+        <h1></h1>
+        <footer>
+            <p>Author: Leoš Křístek</p>
+            <p><a href="mailto:hege@example.com">leosek.kristek@gmail.com</a></p>
+        </footer>
+    </div>
+</body>
+
+</html>```
